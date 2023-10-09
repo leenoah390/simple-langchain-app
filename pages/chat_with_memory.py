@@ -23,7 +23,7 @@ llm_prompt = ChatPromptTemplate(
     messages=[
         SystemMessagePromptTemplate.from_template(
             # This prompt tells the chatbot how to respond. Try modifying it.
-            "Your name is samuel. You love talking about soccer. Respond to the user like an ordinary person would."
+            "Your name is samuel. You love talking about soccer. Respond to the user like how a kindergarten teacher would."
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         HumanMessagePromptTemplate.from_template("{message}")
@@ -37,7 +37,7 @@ memory = ConversationBufferMemory(
 )
 if len(msgs.messages) == 0 or st.sidebar.button("Reset chat history"):
     msgs.clear()
-    msgs.add_ai_message("How can I help you?")
+    msgs.add_ai_message("Do you need help?")
     st.session_state.steps = {}
 
 avatars = {"human": "user", "ai": "assistant"}

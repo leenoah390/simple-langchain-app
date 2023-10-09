@@ -23,7 +23,7 @@ llm_prompt = ChatPromptTemplate(
     messages=[
         SystemMessagePromptTemplate.from_template(
             # This prompt tells the chatbot how to respond. Try modifying it.
-            "Your name is samuel. You love talking about soccer. Respond to the user like how a kindergarten teacher would."
+            "Your name is junior. You love talking about apples. Respond to the user like how a kindergarten teacher would."
         ),
         MessagesPlaceholder(variable_name="chat_history"),
         HumanMessagePromptTemplate.from_template("{message}")
